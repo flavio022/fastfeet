@@ -20,13 +20,13 @@ class Orders extends Model {
       foreignKey: "recipient_id",
       as: "recipient"
     });
-    this.belongsTo(models.DeliverymanFile, {
+    this.belongsTo(models.Deliverymans, {
       foreignKey: "deliveryman_id",
       as: "deliveryman"
     });
     this.belongsTo(models.File, {
       foreignKey: "signature_id",
-      as: "file"
+      as: "signature"
     });
   }
 }
